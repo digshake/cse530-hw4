@@ -31,8 +31,8 @@ public class StringField implements Field {
     public StringField(byte[] b) {
 		int len = b[0];
 		char[] s = new char[len];
-		for(int j = 1; j < len; j++) {
-			s[j] = (char)b[j];
+		for(int j = 0; j < len; j++) {
+			s[j] = (char)b[j+1];
 		}
 		String s2 = new String(s);
 		value = s2;

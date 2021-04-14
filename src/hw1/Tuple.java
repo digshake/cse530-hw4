@@ -59,11 +59,11 @@ public class Tuple {
 	 * @param i the field number to store the data
 	 * @param v the data
 	 */
-	public void setField(int i, byte[] v) {
+	public void setField(int i, Field v) {
 		//your code here
 	}
 	
-	public byte[] getField(int i) {
+	public Field getField(int i) {
 		//your code here
 		return null;
 	}

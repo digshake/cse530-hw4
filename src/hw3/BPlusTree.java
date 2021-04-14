@@ -5,7 +5,7 @@ import hw1.Field;
 
 public class BPlusTree {
     
-    public BPlusTree(int degree) {
+    public BPlusTree(int pInner, int pLeaf) {
     	//your code here
     }
     

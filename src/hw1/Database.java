@@ -2,7 +2,7 @@ package hw1;
 
 import java.io.*;
 
-import hw1.BufferPool;
+import hw4.BufferPool;
 
 /*
  * Student 1 name:

@@ -134,16 +134,16 @@ public class HeapPage {
 				byte[] field = new byte[4];
 				try {
 					dis.read(field);
-					t.setField(j, field);
+					t.setField(j, new IntField(field));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			} else {
-				byte[] field = new byte[132];
+				byte[] field = new byte[129];
 				try {
 					dis.read(field);
-					t.setField(j, field);
+					t.setField(j, new StringField(field));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -198,9 +198,9 @@ public class HeapPage {
 
 			// non-empty slot
 			for (int j=0; j<td.numFields(); j++) {
-				byte[] f = tuples[i].getField(j);
+				Field f = tuples[i].getField(j);
 				try {
-					dos.write(f);
+					dos.write(f.toByteArray());
 
 				} catch (IOException e) {
 					e.printStackTrace();
